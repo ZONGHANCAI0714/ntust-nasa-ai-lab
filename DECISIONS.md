@@ -1,4 +1,4 @@
-﻿# Decision Record ??M0 Governance Initialization
+# Decision Record ??M0 Governance Initialization
 
 Decision date: 2026-11-23 (Asia/Taipei)
 Authority: STUDENT (OWNER)
@@ -57,3 +57,10 @@ Result: APPROVED
 - The GitHub repository is public. Remote file verification succeeded for all four governance files.
 - No dataset, PDF, credential, or personal data file was included in the commit.
 - Worker recommendation: READY_FOR_BRAIN_REVIEW. Brain acceptance: PENDING; no PASS is declared here.
+
+## Brain review and rework — 2026-11-23
+
+- STUDENT-MAIN reviewed the remote initialization and returned `REWORK` with four requirements: correct Markdown text encoding, record actual Exit Codes, commit and push the correction to `main`, and perform a fresh remote review.
+- The encoding audit found valid UTF-8 and no detected mojibake in all four Markdown files. `WORK_ITEM.md` and `DECISIONS.md` had a UTF-8 BOM, unlike `AGENTS.md` and `ROADMAP.md`; normalize the two files to UTF-8 without BOM.
+- M1 authorization: NOT_GRANTED. No further Worker dispatch is permitted by this work item.
+- Acceptance status remains pending STUDENT-MAIN's re-review; the Worker does not declare PASS.

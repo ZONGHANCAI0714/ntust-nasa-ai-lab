@@ -1,4 +1,4 @@
-﻿# Work Item Record ??WO-M0-001
+# Work Item Record ??WO-M0-001
 
 TYPE: BOUNDED_WORK_ORDER
 WORK_ITEM_ID: WO-M0-001
@@ -62,10 +62,19 @@ Initialize the four governance files, initialize the local Git repository, creat
 - Read all four governance files back from GitHub `main` and confirmed they were present.
 - Unrelated data files remain untracked locally and were not pushed.
 
+## Reviewer rework
+
+- On 2026-11-23, STUDENT-MAIN returned REWORK and requested a Markdown encoding fix, actual Exit Codes, a correction commit and push, and another remote review.
+- Encoding audit: all four Markdown files decode as UTF-8 and contain no replacement character or detected mojibake. `WORK_ITEM.md` and `DECISIONS.md` had a UTF-8 BOM; normalize them to UTF-8 without BOM so all four files use one consistent Markdown encoding.
+- Actual earlier command Exit Codes: initial commit `0`; first push attempt `1` (Git rejected the sandbox-owned checkout as dubious ownership); push retry with a command-only `safe.directory` override `0`; documentation correction commit `0`; its push `0`; final remote verification `0`.
+- An earlier combined initialization/configuration command returned `128` because its later Git configuration command ran before the shell correctly recognized the new repository. `git init` itself reported successful initialization. The subsequent explicit stage check first returned `2` due trailing Markdown spaces, then returned `0` after cleanup.
+- No global Git configuration was changed. The safe-directory exception was supplied only to individual commands.
+
 ## Worker return
 
 WORK_ITEM_ID: WO-M0-001
 EXECUTION_STATUS: SUCCESS
+EXIT_CODE: 0 (initial commit, successful push retry, documentation correction commit/push, and remote verification)
 GIT_OBJECT_FORMAT: sha1
 INITIAL_COMMIT_SHA: `14148e37bf8d5ac5b1da179a5f3e24a05be73891`
 COMMIT_MESSAGE: `chore(M0): initialize AI team governance and roadmap`
@@ -77,5 +86,5 @@ PUSH_STATUS: SUCCESS
 REMOTE_VERIFICATION: PASS
 REMOTE_FILES: AGENTS.md VERIFIED; ROADMAP.md VERIFIED; WORK_ITEM.md VERIFIED; DECISIONS.md VERIFIED
 WORKER_RECOMMENDATION: READY_FOR_BRAIN_REVIEW
-BRAIN_ACCEPTANCE: PENDING
-NEXT_ACTION: STUDENT-MAIN to review the remote files and decide acceptance.
+BRAIN_ACCEPTANCE: REWORK (2026-11-23)
+NEXT_ACTION: Normalize the two BOM-prefixed Markdown files, commit and push the correction, then return to STUDENT-MAIN for another review. M1 is not authorized.
