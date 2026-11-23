@@ -41,7 +41,7 @@ Next Role:
 RESEARCH Brain
 
 Status:
-IN_PROGRESS / PENDING_REMOTE_ACCEPTANCE
+PASS
 
 M1: Synthetic CSV First Verified Return
 
@@ -80,7 +80,7 @@ Next Role:
 STUDENT-MAIN / ENGINEERING Brain
 
 Status:
-NOT_STARTED
+BLOCKED
 
 M2: FD001 Data Integration
 

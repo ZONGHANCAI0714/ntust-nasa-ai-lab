@@ -58,4 +58,19 @@ Result: APPROVED
 - No dataset, PDF, credential, or personal data file was included in a commit.
 - STUDENT-MAIN returned REWORK because WORK_ITEM.md and DECISIONS.md contained anomalous text. Those two files are rewritten using ASCII-safe content in this correction.
 - M1 authorization is NOT_GRANTED. No further Worker dispatch is permitted by this work item.
-- Acceptance remains pending STUDENT-MAIN review. The Worker does not declare PASS.
+- At that point, acceptance remained pending STUDENT-MAIN review. The Worker did not declare PASS.
+
+## MAIN_ACK_ACCEPTANCE - WO-M0-002
+
+Decision date: 2026-11-23 (Asia/Taipei)
+Reviewer: STUDENT-MAIN Brain
+Directive ID: MAIN_ACK_ACCEPTANCE
+Related work item: M1-RB-001
+
+- Research ACK acceptance: PASS.
+- M0 acceptance: PASS.
+- M0 GitHub synchronization was pending before WO-M0-002.
+- M1 status: BLOCKED.
+- M1 worker execution: NOT_AUTHORIZED.
+- No CSV analysis or next-worker dispatch is authorized.
+- STUDENT-MAIN must review the synchronized GitHub commit before issuing M1_BLOCKER_RESOLVED and M1_REAUTHORIZED.

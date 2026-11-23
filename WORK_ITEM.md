@@ -86,5 +86,37 @@ INITIAL_PUSH_STATUS: SUCCESS
 INITIAL_REMOTE_VERIFICATION: PASS
 INITIAL_REMOTE_FILES: AGENTS.md VERIFIED; ROADMAP.md VERIFIED; WORK_ITEM.md VERIFIED; DECISIONS.md VERIFIED
 WORKER_RECOMMENDATION: READY_FOR_BRAIN_REVIEW
-BRAIN_ACCEPTANCE: REWORK
-NEXT_ACTION: Return the corrected files to STUDENT-MAIN for re-review. M1 is not authorized.
+PREVIOUS_BRAIN_ACCEPTANCE: REWORK
+PREVIOUS_NEXT_ACTION: Return the corrected files to STUDENT-MAIN for re-review. M1 is not authorized.
+
+## WO-M0-002 - M0 final acceptance synchronization
+
+TYPE: BOUNDED_WORK_ORDER
+WORK_ITEM_ID: WO-M0-002
+PROJECT: NTUST_NASA_AI_LAB
+MILESTONE: M0
+AUTHORIZED_BY: STUDENT-MAIN Brain acceptance directive
+DIRECTIVE_ID: MAIN_ACK_ACCEPTANCE
+RELATED_WORK_ITEM: M1-RB-001
+OBJECTIVE: Synchronize the final M0 PASS record to GitHub main and verify the local Git CLI.
+
+### Accepted decision and limits
+
+- Research ACK acceptance: PASS.
+- M0 acceptance: PASS, as directed by STUDENT-MAIN.
+- GitHub synchronization was pending before this work item.
+- M1 status: BLOCKED.
+- M1 worker execution: NOT_AUTHORIZED.
+- No CSV analysis or next-worker dispatch is authorized.
+
+### Baseline Git CLI verification
+
+- Git CLI version: 2.56.1.windows.1; Exit Code: 0.
+- `git status --short --branch`; Exit Code: 0.
+- `git rev-parse HEAD`; Exit Code: 0.
+- `git ls-remote origin refs/heads/main`; Exit Code: 0.
+- Baseline local and remote SHA before this synchronization: `810558b87e040f3cb770db0375a48c5d06e99625`.
+
+### Acceptance gate
+
+Return the synchronized commit and remote verification to STUDENT-MAIN. M1 remains blocked until STUDENT-MAIN reviews this GitHub update and issues `M1_BLOCKER_RESOLVED` and `M1_REAUTHORIZED`.
