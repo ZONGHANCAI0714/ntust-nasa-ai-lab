@@ -120,3 +120,55 @@ OBJECTIVE: Synchronize the final M0 PASS record to GitHub main and verify the lo
 ### Acceptance gate
 
 Return the synchronized commit and remote verification to STUDENT-MAIN. M1 remains blocked until STUDENT-MAIN reviews this GitHub update and issues `M1_BLOCKER_RESOLVED` and `M1_REAUTHORIZED`.
+
+## WO-M1-GOV-001 - M1 final acceptance governance synchronization
+
+TYPE: BOUNDED_GOVERNANCE_WORK_ORDER
+WORK_ITEM_ID: WO-M1-GOV-001
+PROJECT: NTUST_NASA_AI_LAB
+MILESTONE: M1 governance closeout
+FROM: STUDENT-MAIN
+TO: MAIN Own Worker (Codex)
+AUTHORITY: MAIN_DOMAIN_RETURN_ACCEPTANCE relayed by STUDENT
+STATUS: COMMAND_DISPATCHED
+
+### Objective and scope
+
+Synchronize STUDENT-MAIN's final M1 PASS decision to the governance files. This work item records the accepted M1 evidence and updates the roadmap. It does not repeat Phase A, reanalyze CSV data, or authorize M2.
+
+### Accepted M1 evidence
+
+- Related research work item: M1-RB-001, closed.
+- Accepted report commit: `6372d5ad2f10cec924a11ccbd20fc32539d866c1`.
+- Report commit parent: `f7d75186ff4ba688c553ee501c95b3afa624670c`.
+- STUDENT-MAIN verified that the report commit adds only `reports/M1_DATASET_PROFILE.md`, `reports/M1_EVIDENCE.md`, and `reports/M1_WORKER_RETURN.md`; it did not include the original CSV.
+- MAIN's accepted summary: 6 rows, 4 columns, 1 duplicate, and 1 missing oil-pressure value.
+- Limitation retained from the reports: the original analysis script was not saved. Acceptance covers evidence-backed synthetic-data validation, not full programmatic reproducibility.
+
+### Deliverables
+
+- Set M1 status to PASS in `ROADMAP.md`; keep M2 LOCKED.
+- Record MAIN's acceptance, evidence commit, and limitation in `DECISIONS.md`.
+- Record M1-RB-001 closure and this governance synchronization in `WORK_ITEM.md`.
+
+### Acceptance criteria
+
+1. The three governance updates are committed and pushed to GitHub main.
+2. Local HEAD matches remote `refs/heads/main`.
+3. The remote governance files are read back and verified.
+4. M1 is recorded as PASS and M2 remains LOCKED and NOT_AUTHORIZED.
+5. No CSV analysis or M2 work is performed.
+
+### STOP_IF
+
+- GOVERNANCE_CONFLICT
+- ACCEPTED_COMMIT_MISMATCH
+- PUSH_FAILED
+- REMOTE_VERIFICATION_FAILED
+- SENSITIVE_DATA_EXPOSURE
+- M1_NOT_REAUTHORIZED for any new analysis
+
+### Baseline evidence
+
+- Before synchronization, local HEAD and remote main both matched `6372d5ad2f10cec924a11ccbd20fc32539d866c1`.
+- The accepted M1 report commit's parent is M0 final acceptance commit `f7d75186ff4ba688c553ee501c95b3afa624670c`.

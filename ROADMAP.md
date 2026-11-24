@@ -80,7 +80,7 @@ Next Role:
 STUDENT-MAIN / ENGINEERING Brain
 
 Status:
-BLOCKED
+PASS
 
 M2: FD001 Data Integration
 

@@ -74,3 +74,20 @@ Related work item: M1-RB-001
 - M1 worker execution: NOT_AUTHORIZED.
 - No CSV analysis or next-worker dispatch is authorized.
 - STUDENT-MAIN must review the synchronized GitHub commit before issuing M1_BLOCKER_RESOLVED and M1_REAUTHORIZED.
+
+## MAIN_DOMAIN_RETURN_ACCEPTANCE - WO-M1-GOV-001
+
+Decision date: 2026-11-24 (Asia/Taipei)
+Authority: STUDENT-MAIN
+Related work item: M1-RB-001
+Accepted report commit: 6372d5ad2f10cec924a11ccbd20fc32539d866c1
+Accepted report commit parent: f7d75186ff4ba688c553ee501c95b3afa624670c
+
+- Research domain acceptance: ACCEPTED.
+- MAIN final acceptance: PASS.
+- M1 Phase A: PASS; Phase B1: PASS; Phase B2: PASS.
+- M1 status: ACCEPTED. M1-RB-001 status: CLOSED.
+- STUDENT-MAIN verified the public repository, main branch, commit parent, and three report-only changes. No original CSV was included in the report commit.
+- Accepted summary: 6 rows, 4 columns, one duplicate, and one missing oil-pressure value.
+- Limitation: the original analysis script was not independently saved. This acceptance covers evidence-backed synthetic data validation, not complete programmatic reproducibility.
+- M2 remains LOCKED and NOT_AUTHORIZED. Any M2 start requires a separate STUDENT-MAIN authorization.
