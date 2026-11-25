@@ -1,0 +1,613 @@
+{
+    "dataset_id":  "NASA_CMAPSS_FD001",
+    "contract_version":  "1.0.0-DRAFT",
+    "status":  "DRAFT",
+    "source_manifest":  [
+                            {
+                                "source_sha256":  "963B5E22825B34D8B21C69E1AEB4AF3E647050EB672EE8834BA4B5D91D2DE0F8",
+                                "dataset_split":  "TRAIN",
+                                "record_count":  20631,
+                                "source_filename":  "train_FD001.txt",
+                                "column_count":  26
+                            },
+                            {
+                                "source_sha256":  "3CDA7109CE17BAFB5443F2AC926CFCF88154B941B8C4CF95EB55D1DDD6F52851",
+                                "dataset_split":  "TEST",
+                                "record_count":  13096,
+                                "source_filename":  "test_FD001.txt",
+                                "column_count":  26
+                            },
+                            {
+                                "source_sha256":  "A19C8EC94931949D0485BDC35118206E9C81C4547B422EFB9CF86F4CEDDBCECA",
+                                "dataset_split":  "TEST_RUL",
+                                "record_count":  100,
+                                "source_filename":  "RUL_FD001.txt",
+                                "column_count":  1
+                            }
+                        ],
+    "canonical_columns":  [
+                              {
+                                  "source_column_number":  1,
+                                  "canonical_field_name":  "unit_id",
+                                  "data_type":  "integer",
+                                  "semantic_meaning":  "Engine unit identifier",
+                                  "unit":  "not applicable",
+                                  "allowed_query_usage":  "unit filter",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  2,
+                                  "canonical_field_name":  "cycle",
+                                  "data_type":  "integer",
+                                  "semantic_meaning":  "Observed operating cycle",
+                                  "unit":  "not applicable",
+                                  "allowed_query_usage":  "cycle filter and ordering",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  3,
+                                  "canonical_field_name":  "op_setting_1",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Operating setting 1",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "observation context only",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  4,
+                                  "canonical_field_name":  "op_setting_2",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Operating setting 2",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "observation context only",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  5,
+                                  "canonical_field_name":  "op_setting_3",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Operating setting 3",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "observation context only",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  6,
+                                  "canonical_field_name":  "sensor_1",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 1; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  7,
+                                  "canonical_field_name":  "sensor_2",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 2; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  8,
+                                  "canonical_field_name":  "sensor_3",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 3; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  9,
+                                  "canonical_field_name":  "sensor_4",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 4; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  10,
+                                  "canonical_field_name":  "sensor_5",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 5; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  11,
+                                  "canonical_field_name":  "sensor_6",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 6; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  12,
+                                  "canonical_field_name":  "sensor_7",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 7; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  13,
+                                  "canonical_field_name":  "sensor_8",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 8; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  14,
+                                  "canonical_field_name":  "sensor_9",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 9; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  15,
+                                  "canonical_field_name":  "sensor_10",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 10; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  16,
+                                  "canonical_field_name":  "sensor_11",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 11; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  17,
+                                  "canonical_field_name":  "sensor_12",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 12; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  18,
+                                  "canonical_field_name":  "sensor_13",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 13; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  19,
+                                  "canonical_field_name":  "sensor_14",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 14; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  20,
+                                  "canonical_field_name":  "sensor_15",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 15; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  21,
+                                  "canonical_field_name":  "sensor_16",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 16; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  22,
+                                  "canonical_field_name":  "sensor_17",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 17; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  23,
+                                  "canonical_field_name":  "sensor_18",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 18; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  24,
+                                  "canonical_field_name":  "sensor_19",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 19; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  25,
+                                  "canonical_field_name":  "sensor_20",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 20; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              },
+                              {
+                                  "source_column_number":  26,
+                                  "canonical_field_name":  "sensor_21",
+                                  "data_type":  "number",
+                                  "semantic_meaning":  "Sensor channel 21; physical quantity is not verified.",
+                                  "unit":  "UNKNOWN",
+                                  "allowed_query_usage":  "sensor observation and trend query",
+                                  "missing_value_policy":  "No zero imputation; malformed short rows are rejected and missing position is unknown in whitespace format."
+                              }
+                          ],
+    "sensor_catalog":  [
+                           {
+                               "sensor_id":  "sensor_1",
+                               "canonical_name":  "sensor_1",
+                               "source_column":  6,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           },
+                           {
+                               "sensor_id":  "sensor_2",
+                               "canonical_name":  "sensor_2",
+                               "source_column":  7,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           },
+                           {
+                               "sensor_id":  "sensor_3",
+                               "canonical_name":  "sensor_3",
+                               "source_column":  8,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           },
+                           {
+                               "sensor_id":  "sensor_4",
+                               "canonical_name":  "sensor_4",
+                               "source_column":  9,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           },
+                           {
+                               "sensor_id":  "sensor_5",
+                               "canonical_name":  "sensor_5",
+                               "source_column":  10,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           },
+                           {
+                               "sensor_id":  "sensor_6",
+                               "canonical_name":  "sensor_6",
+                               "source_column":  11,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           },
+                           {
+                               "sensor_id":  "sensor_7",
+                               "canonical_name":  "sensor_7",
+                               "source_column":  12,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           },
+                           {
+                               "sensor_id":  "sensor_8",
+                               "canonical_name":  "sensor_8",
+                               "source_column":  13,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           },
+                           {
+                               "sensor_id":  "sensor_9",
+                               "canonical_name":  "sensor_9",
+                               "source_column":  14,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           },
+                           {
+                               "sensor_id":  "sensor_10",
+                               "canonical_name":  "sensor_10",
+                               "source_column":  15,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           },
+                           {
+                               "sensor_id":  "sensor_11",
+                               "canonical_name":  "sensor_11",
+                               "source_column":  16,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           },
+                           {
+                               "sensor_id":  "sensor_12",
+                               "canonical_name":  "sensor_12",
+                               "source_column":  17,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           },
+                           {
+                               "sensor_id":  "sensor_13",
+                               "canonical_name":  "sensor_13",
+                               "source_column":  18,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           },
+                           {
+                               "sensor_id":  "sensor_14",
+                               "canonical_name":  "sensor_14",
+                               "source_column":  19,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           },
+                           {
+                               "sensor_id":  "sensor_15",
+                               "canonical_name":  "sensor_15",
+                               "source_column":  20,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           },
+                           {
+                               "sensor_id":  "sensor_16",
+                               "canonical_name":  "sensor_16",
+                               "source_column":  21,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           },
+                           {
+                               "sensor_id":  "sensor_17",
+                               "canonical_name":  "sensor_17",
+                               "source_column":  22,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           },
+                           {
+                               "sensor_id":  "sensor_18",
+                               "canonical_name":  "sensor_18",
+                               "source_column":  23,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           },
+                           {
+                               "sensor_id":  "sensor_19",
+                               "canonical_name":  "sensor_19",
+                               "source_column":  24,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           },
+                           {
+                               "sensor_id":  "sensor_20",
+                               "canonical_name":  "sensor_20",
+                               "source_column":  25,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           },
+                           {
+                               "sensor_id":  "sensor_21",
+                               "canonical_name":  "sensor_21",
+                               "source_column":  26,
+                               "data_type":  "number",
+                               "unit":  "UNKNOWN"
+                           }
+                       ],
+    "structures":  {
+                       "source_manifest":  [
+                                               "source_filename",
+                                               "source_sha256",
+                                               "record_count",
+                                               "column_count",
+                                               "dataset_split"
+                                           ],
+                       "engine_unit":  [
+                                           "dataset_split",
+                                           "unit_id",
+                                           "available_cycles",
+                                           "first_cycle",
+                                           "last_cycle"
+                                       ],
+                       "sensor_catalog":  [
+                                              "sensor_id",
+                                              "canonical_name",
+                                              "source_column",
+                                              "data_type",
+                                              "unit"
+                                          ],
+                       "observation_request":  [
+                                                   "dataset_split",
+                                                   "unit_id",
+                                                   "cycle",
+                                                   "sensor_id"
+                                               ],
+                       "observation_response":  [
+                                                    "dataset_split",
+                                                    "unit_id",
+                                                    "cycle",
+                                                    "sensor_id",
+                                                    "sensor_value",
+                                                    "source_reference",
+                                                    "quality_flags"
+                                                ],
+                       "trend_request":  [
+                                             "dataset_split",
+                                             "unit_id",
+                                             "sensor_id",
+                                             "cycle_start",
+                                             "cycle_end"
+                                         ],
+                       "trend_response":  [
+                                              "dataset_split",
+                                              "unit_id",
+                                              "sensor_id",
+                                              "ordered_cycles",
+                                              "sensor_values",
+                                              "observation_count",
+                                              "source_references",
+                                              "quality_flags"
+                                          ],
+                       "rul_response":  [
+                                            "dataset_split",
+                                            "unit_id",
+                                            "rul_value",
+                                            "rul_source_row",
+                                            "source_file_sha256",
+                                            "derived_flag",
+                                            "alignment_method",
+                                            "semantic_limitations"
+                                        ],
+                       "source_reference":  [
+                                                "source_filename",
+                                                "source_sha256",
+                                                "physical_line_number",
+                                                "parsed_record_index"
+                                            ],
+                       "error_response":  [
+                                              "error_code",
+                                              "message",
+                                              "request_context"
+                                          ]
+                   },
+    "query_rules":  {
+                        "valid_dataset_split":  [
+                                                    "TRAIN",
+                                                    "TEST"
+                                                ],
+                        "unit_membership":  "Use actual verified membership per split.",
+                        "sensor_ids":  "sensor_1 through sensor_21",
+                        "observation_key":  [
+                                                "dataset_split",
+                                                "unit_id",
+                                                "cycle",
+                                                "sensor_id"
+                                            ],
+                        "trend_key":  [
+                                          "dataset_split",
+                                          "unit_id",
+                                          "sensor_id",
+                                          "cycle_start",
+                                          "cycle_end"
+                                      ],
+                        "cycle_bounds":  "Inclusive; ascending numeric cycle order; observed cycles only; no interpolation.",
+                        "empty_trend":  "For a valid Unit and valid interval with no matching observations return an empty response with observation_count 0.",
+                        "missing_distinction":  "Invalid request returns an error; valid empty trend returns success; missing observation lookup returns OBSERVATION_NOT_FOUND."
+                    },
+    "rul_semantics":  {
+                          "train":  {
+                                        "formula":  "max_cycle_for_unit - current_cycle",
+                                        "derived_flag":  true,
+                                        "source_label":  "DERIVED_TRAIN_RUL"
+                                    },
+                          "test":  {
+                                       "direct_unit_id_verification":  "NOT_POSSIBLE",
+                                       "records":  100,
+                                       "semantic_dependency":  "TRUSTED_FD001_STANDARD_ROW_ORDER",
+                                       "source":  "RUL_FD001.txt",
+                                       "early_cycle_response":  "RUL_ALIGNMENT_UNAVAILABLE",
+                                       "column_count":  1,
+                                       "alignment_method":  "ORDER_BASED_MAPPING",
+                                       "available_at":  "Final observed cycle only"
+                                   }
+                      },
+    "serialization":  {
+                          "json_numeric":  "JSON number; invariant-culture source parse",
+                          "precision":  "Preserve source double value using round-trip representation; no arbitrary display rounding.",
+                          "comparison_tolerance":  "Exact parsed Double equality for same source token; use 0 tolerance in same-runtime checks.",
+                          "negative_zero":  "Normalize negative zero to numeric zero in JSON serialization.",
+                          "null_missing":  "Null is not numeric zero; absent observation is not returned as zero.",
+                          "empty_trend":  "ordered_cycles=[], sensor_values=[], source_references=[], observation_count=0",
+                          "cycle_sort":  "Ascending integer order",
+                          "sensor_ids":  "Stable canonical sensor_1 through sensor_21",
+                          "source_reference_types":  "physical_line_number and parsed_record_index are positive integers."
+                      },
+    "error_codes":  [
+                        {
+                            "request_context":  "Echo only the relevant split, unit, cycle/bounds, sensor, or source filename supplied or implicated by the request.",
+                            "message_semantics":  "Return a non-success response with code FILE_NOT_FOUND and describe the trigger without substituting empty or zero-valued data.",
+                            "error_code":  "FILE_NOT_FOUND",
+                            "retry_can_change_result":  true,
+                            "trigger":  "A required trusted source file is absent."
+                        },
+                        {
+                            "request_context":  "Echo only the relevant split, unit, cycle/bounds, sensor, or source filename supplied or implicated by the request.",
+                            "message_semantics":  "Return a non-success response with code SOURCE_HASH_MISMATCH and describe the trigger without substituting empty or zero-valued data.",
+                            "error_code":  "SOURCE_HASH_MISMATCH",
+                            "retry_can_change_result":  false,
+                            "trigger":  "Actual source SHA256 differs from the accepted hash."
+                        },
+                        {
+                            "request_context":  "Echo only the relevant split, unit, cycle/bounds, sensor, or source filename supplied or implicated by the request.",
+                            "message_semantics":  "Return a non-success response with code INVALID_SPLIT and describe the trigger without substituting empty or zero-valued data.",
+                            "error_code":  "INVALID_SPLIT",
+                            "retry_can_change_result":  false,
+                            "trigger":  "dataset_split is not TRAIN or TEST."
+                        },
+                        {
+                            "request_context":  "Echo only the relevant split, unit, cycle/bounds, sensor, or source filename supplied or implicated by the request.",
+                            "message_semantics":  "Return a non-success response with code INVALID_UNIT and describe the trigger without substituting empty or zero-valued data.",
+                            "error_code":  "INVALID_UNIT",
+                            "retry_can_change_result":  false,
+                            "trigger":  "Unit ID is not a member of the requested split."
+                        },
+                        {
+                            "request_context":  "Echo only the relevant split, unit, cycle/bounds, sensor, or source filename supplied or implicated by the request.",
+                            "message_semantics":  "Return a non-success response with code INVALID_CYCLE and describe the trigger without substituting empty or zero-valued data.",
+                            "error_code":  "INVALID_CYCLE",
+                            "retry_can_change_result":  false,
+                            "trigger":  "Cycle/bounds are not positive integers, reversed, or outside the split-wide cycle domain."
+                        },
+                        {
+                            "request_context":  "Echo only the relevant split, unit, cycle/bounds, sensor, or source filename supplied or implicated by the request.",
+                            "message_semantics":  "Return a non-success response with code INVALID_SENSOR and describe the trigger without substituting empty or zero-valued data.",
+                            "error_code":  "INVALID_SENSOR",
+                            "retry_can_change_result":  false,
+                            "trigger":  "Sensor ID is not sensor_1 through sensor_21."
+                        },
+                        {
+                            "request_context":  "Echo only the relevant split, unit, cycle/bounds, sensor, or source filename supplied or implicated by the request.",
+                            "message_semantics":  "Return a non-success response with code OBSERVATION_NOT_FOUND and describe the trigger without substituting empty or zero-valued data.",
+                            "error_code":  "OBSERVATION_NOT_FOUND",
+                            "retry_can_change_result":  true,
+                            "trigger":  "Request is valid but no matching observation exists."
+                        },
+                        {
+                            "request_context":  "Echo only the relevant split, unit, cycle/bounds, sensor, or source filename supplied or implicated by the request.",
+                            "message_semantics":  "Return a non-success response with code SCHEMA_MISMATCH and describe the trigger without substituting empty or zero-valued data.",
+                            "error_code":  "SCHEMA_MISMATCH",
+                            "retry_can_change_result":  true,
+                            "trigger":  "Source rows violate the verified column or numeric schema."
+                        },
+                        {
+                            "request_context":  "Echo only the relevant split, unit, cycle/bounds, sensor, or source filename supplied or implicated by the request.",
+                            "message_semantics":  "Return a non-success response with code RUL_ALIGNMENT_UNAVAILABLE and describe the trigger without substituting empty or zero-valued data.",
+                            "error_code":  "RUL_ALIGNMENT_UNAVAILABLE",
+                            "retry_can_change_result":  false,
+                            "trigger":  "Test source RUL was requested for a non-final observed cycle or cannot be mapped."
+                        }
+                    ],
+    "low_variance_screen":  {
+                                "statistic":  "sample coefficient of variation: sample SD / abs(mean)",
+                                "threshold":  "CV \u003c 0.01",
+                                "zero_mean":  "CV undefined; not flagged by CV rule",
+                                "constant":  "constant is separately flagged when min equals max",
+                                "interpretation":  "Descriptive warning only; not evidence of sensor failure."
+                            }
+}
